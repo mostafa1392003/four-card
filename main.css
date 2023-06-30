@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f0f0f0;
+    text-transform: capitalize;
+}
+.container{
+    position: relative;
+    top: 75px;
+  
+
+}
+.header {
+
+   display: grid;
+   grid-template-columns: 1,1fr;
+   justify-content: center;
+    font-family: Poppins;
+    text-align: center;
+
+}
+.header p:first-child {
+    font-size: 22px;
+    font-weight: 200;
+
+}
+.header p:nth-child(2) {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.header p:last-child {
+    font-size: 15px;
+    font-weight: 100;
+    max-width: 450px;
+}
+
+section{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    bottom: 20px;
+}
+section div {
+    width: calc(94%/3);
+}
+.div2  {
+display: flex;
+flex-wrap: wrap;
+align-content: space-between;
+}
+.div2 div {
+    width:100%;
+}
+.div2 .div22 {
+    margin-top: 33px;
+}
+section div:first-child,
+section div:last-child,
+section div:nth-child(2) div {
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+    height: 180px;
+    background-color: #fff;
+    position: relative;
+    padding: 10px;
+}
+section div:first-child::after,
+section div:last-child::after,
+section div:nth-child(2) div::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: -3px;
+    left: 0;
+} 
+section div:first-child::after{
+    background-color: #00BCD4;
+}
+section div:last-child::after{
+    background-color: #3F51B5;
+}
+section div:nth-child(2) div:first-child::after{
+    background-color: #E91E63;
+}
+section div:nth-child(2) div:last-child::after{
+background-color: #FFC107;
+}
+section p {
+    font-weight: bold;
+    background-color: unset;
+    font-size: 18px;
+}
+section span {
+    font-size: 13px;
+    font-weight: 100;
+    color: darkgrey;
+    max-width: 70px;
+}
+section img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width:700px) {
+    section{
+        display: block;
+    }
+    section div {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+}
